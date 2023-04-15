@@ -480,9 +480,175 @@
 
 // ......................................ПРИКЛАДИ МЕТОДІВ ОБЬЕКТА
 
-const plauList = {
-  name:'Супер плейліст',
-  rating: 5,
-  tracks: ['трек1', 'трек2', 'трек3'],
-  trackCount:3,
-}
+// const playList = {
+  // name: 'Супер плейліст',
+  // rating: 5,
+  // tracks: ['трек1', 'трек2', 'трек3'],
+  // trackCount: 3,
+
+
+  // ..............ЗМІНИТИ ІМЯ
+  // changeName(newName) {
+  //   this.name = newName;
+  // },
+
+  // ............ДОДАТИ НОВИЙ ТРЕК 
+  // addTrack(track) {
+  //   this.tracks.push(track);
+   
+    // tracks ['трек1', 'трек2', 'трек3', 'трек30']
+  // },
+    
+ // .....................ОНОВИТИ  рейтинг
+ 
+//   updateRatting(newRatting) {
+//     this.rating = newRatting;
+
+//  },
+// .............ПОВЕРНУТИ ДОВЖИНУ ПЛЕЙЛІСТА З 4 ТРЕКІВ
+  
+// getTrackCount(){
+  // довжина плейліста дорівнює кількості треків
+  // return this.tracks.length;
+  
+// }
+//  }
+// playList.changeName('нове імя')
+// playList.addTrack('трек30')
+// console.log(playList)
+// playList.updateRatting(4)
+// console.log(playList)
+
+
+
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+// let totalFeedback = 0;
+// const keys = Object.keys(feedback);
+// for (const key of keys) {
+//   console.log(key)
+//   console.log(feedback[key])
+
+// totalFeedback += feedback[key]
+  
+// }
+// console.log(totalFeedback)
+
+
+// let totalValues = 0;
+
+// const values = Object.values(feedback);
+// for (const value of values) {
+//   totalValues += value;
+// }
+// console.log(totalValues)
+
+
+
+// .....................................................МАСИВ ОБЕКТІВ
+
+
+// const friends = [
+//   { name: 'Mango', online: false},
+//   { name: 'Lemon', online: true},
+//   { name: 'Orange', online: false},
+//   { name: 'Melon', online: false},
+//   { name: 'Poly', online: true},
+//   { name: 'Apple', online: false},
+// ]
+// console.table(friends)
+// Перебирамо
+
+// for ( const friend of friends){
+//   console.log(friend.name)
+
+//   friends[2].bass = 666;
+//   friend.ccc = 555;
+  
+// }
+// console.table(friends)
+
+// ................ШУКАЄМО ДРУГА ПО ІМЕНІ
+
+// function findFriendByName (allFriendrs, friendName){
+// for (const friend of allFriendrs){
+//   console.log(friend.name)
+//   if ( friend.name === friendName)
+//   return 'yes';
+// }
+// return 'No'
+  
+// }
+
+// console.log(findFriendByName(friends, 'Poly'));
+
+// ...................ОТРИМАТИ ІМЕНА ВСІХ ДРУЗІВ, повернути в нвому масиві
+
+
+// function getAllName(allFriendrs) {
+//   const names = [];
+  
+//   for (const friend of allFriendrs){
+//   names.push(friend.name);
+//   }
+//   return names;
+// }
+// console.log(getAllName(friends))
+
+// .............................. ОТРИМАТИ  ІМЕНА ТИХ ДРУЗІВ ЯКІ ОНЛАЙН
+
+// function getOnlineFriends (allFriendrs){
+//   const friendOnline = [];
+
+//   for (const friend of allFriendrs){
+    
+//     // якщо друг онлайн додаємо його у створений масив
+//      if( friend.online){
+//       friendOnline.push(friend);
+//      }
+//   }
+  
+  // повертаємо масив друзів онлайн
+// return friendOnline;
+// }
+// console.log(getOnlineFriends(friends))
+
+// ...................................ОТРИМАТИ МАСИВ ВСІХ ДРУЗІВ ЯКІ ОФЛАЙН
+
+// function getOfflineFriends (allFriendrs) {
+
+//   const friendOffline = [];
+
+//   for (const friend of allFriendrs){
+//     if ( !friend.online) {
+//       friendOffline.push(friend);
+//     }
+//   }
+
+// return friendOffline;
+// }
+// console.log(getOfflineFriends(friends))
+
+//.................................ФУНКЦІЯ ПОВЕРТАЄ ОБЬЄКТ З 2 МАСИВАМИ З ОНЛАЙН І ОФЛАЙН ДРУЗЯМИ 
+
+// function getFriendsByOnlineStatus(allFriends) {
+// створюємо обьект з масивами де будуть збкрігатися списки друзів за статусом
+// const friendsByStatus = { 
+// online: [],
+// offline: [],
+// };
+
+// for (const friend of allFriends){
+// console.log(friend)
+// if( friend.online){
+//   friendsByStatus.online.push(friend);
+// }
+// friendsByStatus.offline.push(friend);
+// }
+// return friendsByStatus;
+// }
+// console.log(getFriendsByOnlineStatus(friends));
