@@ -345,7 +345,7 @@
 
 // ...............функція для  пошуку логіна loginToFind
 
- const logins = ['hklhh', 'vvvvvvvvvv', 'jh;akda', 'pppppppp'];
+//  const logins = ['hklhh', 'vvvvvvvvvv', 'jh;akda', 'pppppppp'];
 // const loginToFind = 'vvvvvvvvvv';
 
 // const message = logins.includes(loginToFind) ? 'Find' : 'Sorry';
@@ -376,6 +376,113 @@
 //   const message = allLogins.includes(loginToFind) ? 'Find' : 'Sorry';
 //   return message;
 // }
-  // return message = allLogins.includes(loginToFind) ? 'Find' : 'Sorry'; ще проще зразу return замість message
+// ще проще зразу return замість message
+  // return message = allLogins.includes(loginToFind) ? 'Find' : 'Sorry'; 
   
 // console.log(findLogin(logins, 'qqqqqqqqqqqqq'))
+
+// ФУНКЦІЯ ЯКА ШУКАЄ НАЙМЕНЬШЕ ЧИСЛО В МАСИВІ
+
+// const numbers = [3, 5, 45, 0, 15];
+// розпаковка масива в числа методом ...spred
+// const x = Math.min(...numbers);
+// console.log(numbers)
+// console.log(x)
+
+// СПОСІБ 2, ДОВШИЙ
+// припустимо що перший елемент в масиві є найменше число
+// let smallNumber = numbers[0];
+// перебираємо масив
+// for (const number of numbers) {
+//   if (number < smallNumber) {
+//     smallNumber = number;
+//   }
+// }
+
+// console.log(smallNumber)
+
+// .................ФУНКЦІЯ ЯКА  ЗМІНЮЄ РЕГІСТР ЛІТКРИ НА ПРОТИЛЕЖНИЙ
+// function change(string) {
+
+  
+  // створюємо зміну де розбиваємо рядок по символом 
+  // const letters = string.split('');
+  // створюємо змінну куди буде повертатися новий змінений рядок
+  // let updateString = '';
+  // перебираємо масив
+
+  // for (const letter of letters) {
+  //   const isInLowerCase = letter === letter.toLowerCase();
+  //   updateString += isInLowerCase
+  //     ? letter.toUpperCase()
+  //     : letter.toLowerCase();
+  // }
+
+  // return updateString
+  // }
+  // console.log(change('SSSSBBBBBmmmmmmTTTTT'))
+
+  //  ЯК РАЗПАКУВАТИ ПСЕВДО МАСИВ В МАСИВ
+  //  ставимо ...перед псевдо масивом/ в ...args запише всі елементи після a,b,c
+// const fn = function (a, b, c, ...args){
+    
+//   }
+
+
+//  .........НАПИШИ ФУНКЦІЮ ДЛЯ ДОДАВАННЯ БУДЬЯКОЇ КІЛЬКОСТІ ЧИСЕЛ
+
+// const add = function(...args) {
+
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+// console.log(add(1, 10, 5, 7, 0, 3, 77));
+
+// ..................НАПИШИ ФУНКЦІЮ filterNumber(array,[number1, ...]) ЯКА
+// ПЕРШИЙ АРГУМЕНТ ПРИЙМАЄ МАСИВ ЧИСЕЛ
+// ПІСЛЯ ПЕРШОГО АРГУМЕНТА БУДЕ БУДЬЯКА КІЛЬКІСТЬ АГРУМЕТІВ - ЧИСЕЛ
+// ФУНКЦІЯ ПОВЕРТАЄ МАСИВ З АРГУМЕНТАМИ ПОЧИНАЮЧИ З ДРУГОГО
+// 
+
+// 
+
+  // створюємо змінну де буде повертатися масив
+  // const uniqueElement = [];
+// потрібно перевірити чи включає масив array в args, або навпаки немає різниці
+  // for (const element of array) {
+  // перевіряємо чи є в args елементи масива array
+    // if (args.includes(element)) {
+      // цей елемент який збігається записуємо у новий масив
+//       uniqueElement.push(element);
+
+//     }
+//   }
+//   return uniqueElement;
+//  }
+
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+
+
+//  .............ОБЕКТИ.........................
+
+// const inputName = 'color';
+// const inputValue = 'tomato';
+// обект з значень змінних
+// const colorPicker = {
+//   [inputName]:inputValue,
+// }
+// color:'tomato'
+// console.log(colorPicker)
+
+// ......................................ПРИКЛАДИ МЕТОДІВ ОБЬЕКТА
+
+const plauList = {
+  name:'Супер плейліст',
+  rating: 5,
+  tracks: ['трек1', 'трек2', 'трек3'],
+  trackCount:3,
+}
