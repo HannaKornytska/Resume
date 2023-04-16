@@ -652,3 +652,244 @@
 // return friendsByStatus;
 // }
 // console.log(getFriendsByOnlineStatus(friends));
+
+
+// ..........................SPRED зазпакока робиться копія або ссилка на масив
+
+// const number = [1,2,6,40].concat([23,8,45,9], [66,1,0,7]);
+
+// console.log(number)
+
+// const numbers = [ ...[1,2,3],4,5];
+// console.log(numbers)
+
+
+// const temps = [1, 15, 20, 0, 16, 8];
+
+
+// ............................МАСИВИ
+
+
+//  пошук свмого маленького і селикого числа(температури)
+
+// console.log(Math.max(temps))
+// NaN
+// console.log(Math.max(...temps))
+//  20
+// console.log(Math.min(...temps))
+// 0
+
+//  зєднуємо декілька масивів spred 
+
+// const lastWeekTemps = [1, 2, 3];
+// const currentWeekTemps = [1, 10, 3];
+// const nextWeekTemps = [19, 2, 3]
+
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps, ...nextWeekTemps];
+// console.log(allTemps)
+
+// ...........РАСПИЛЯЄМО ОБЄКТИ
+
+// const defaultSettings = {
+//   theme: 'light',
+//   showNotification: true,
+//   hideSidebar: false,
+// }
+
+// console.table(defaultSettings)
+
+// const userSettings = {
+//   showNotification: false,
+//   hideSidebar: true,
+// }
+
+// зєднуємо розпаковкою настройки подефолду з новими настойками
+
+// const finalSettings = {
+//   ...defaultSettings,
+//   ...userSettings
+// }
+// console.table(finalSettings)
+
+// ..................ДЕСТРУКТУРИЗАЦІЯ ОБЄКТА
+
+// const playlist = {
+//   names: 'Супер плейліст',
+//   rating: 5,
+//   tracks: ['трек1', 'трек2', 'трек3'],
+//   trackCount: 3,
+// }
+
+// const {
+//   names,
+//   rating,
+//   tracks,
+//   trackCount: numberOfTrack,
+//   autor = 'user',
+// } = playlist;
+
+// console.log(numberOfTrack)
+
+// const { names, rating, tracks, trackCount } = playlist;
+
+// console.log(names, rating, tracks, trackCount);
+
+// const { names, rating, tracks, trackCount,  } = playlist;
+
+// ...................ГЛИБОКА ДИСТРУКТУРИЗАЦІЯ
+
+
+// const profile = {
+//   names: 'Hanna Kornytska',
+//   tag: 'hhhhhhh',
+//   location: 'Oslo',
+//   avatar: 'https://gkhgghjb/mlk;jl///nkhhlkj',
+//   status: {
+//     followers: 5698,
+//     views: 4827,
+//     likes: 1208,
+//   },
+// };
+
+// console.table(profile);
+
+// const {
+//   names,
+//   avatar,
+//   status: { followers, views, likes },
+// } = profile;
+
+// console.log(names, avatar, followers,views,likes)
+
+// ....................ДЕСТРУКТИРИЗАЦІЯ МАСИВА
+
+// const rgb = [256, 100, 80];
+
+// const [a, b, c] = rgb;
+// console.log(rgb)
+
+// const authors = {
+//   kiwi: 4,
+//   poly: 6,
+//   ajax: 5,
+//   mango: 6,
+// }
+
+// const entries = Object.entries(authors);
+// console.table(entries);
+// перебираємо масив масивів після Object.entries
+// for (const entry of entries) {
+  
+  // const name = entry[0];
+  // const rating = entry[1];
+
+  // або записати деструктивно
+
+  // const [name, rating] = entry;
+
+//   console.log(name, rating);
+// }
+
+// ................., REST (сбор)
+
+// const profile = {
+//   names: 'Hanna Kornytska',
+//   tag: 'hhhhhhh',
+//   location: 'Oslo',
+//   avatar: 'https://gkhgghjb/mlk;jl///nkhhlkj',
+//   status: {
+//     followers: 5698,
+//     views: 4827,
+//     likes: 1208,
+//   },
+// };
+
+//  якщо птрібно розділити обьект на основні парвметри і  всі останні зберегти окремо
+// задаемо папаметри які потрібні,всі інші записуемо через ...(імя змінною довільне)
+// const { names, tag, location, ...other } = profile;
+// console.log(names, tag, location);
+// console.log(other);
+
+// ...............ПАТЕРН (ОБЬЕКТ НАСТРОІК) КОЛИ БАГАТО ПАРАМЕТРІВ У ФУНКІЇ
+//  userProfile  це profile
+// function showProfileInfo(userProfile) {
+  // деструктиризація або записати замість (userProfile)
+//   const { names, tag, location, avatar, status: { followers, views, likes } } = userProfile;
+//   console.log(names, tag, location, avatar, followers, views, likes);
+// }
+
+// const profile = {
+//   names: 'Hanna Kornytska',
+//   tag: 'hhhhhhh',
+//   location: 'Oslo',
+//   avatar: 'https://gkhgghjb/mlk;jl///nkhhlkj',
+//   status: {
+//     followers: 5698,
+//     views: 4827,
+//     likes: 1208,
+//   },
+// };
+
+// showProfileInfo(profile);
+
+// ....................КОРЗИНА ТОВАРІВ
+
+const cart = {
+  items: [],
+
+  getItems() {
+    return this.items;
+   },
+  add(product) {
+    // щоб додати новий ключ з властивістю в обьект створюємо змінну і в неї
+    //  додаємо всі продукти по дефолту ...product і пишемо новий quantity: 1
+    const newProduct = {
+      ...product,
+      quantity: 1,
+    }
+    this.items.push(newProduct);
+   },
+  remove(productName) {
+    for (let i = 0; i < this.items.length; i++) {
+      const item = this.items[i];
+      if (productName === item.name) {
+        this.items.splice(i, 1);
+      }
+  }
+   },
+  clear() { 
+    this.items = [];
+  },
+  countTotalPrice() { 
+    const { items } = this;
+    let total = 0;
+
+    for (const { price } of items) {
+      total += price;
+    }
+    return total
+  },
+  increaseQuantity(productName) { },
+  decreaseQuantity(productName) { },
+};
+
+
+cart.add({ name: 'orange', price: 50 });
+cart.add({ name: 'kiwi', price: 40 });
+cart.add({ name: 'kiwi', price: 40 });
+cart.add({ name: 'kiwi', price: 40 });
+
+console.table(cart.getItems())
+console.log('total', cart.countTotalPrice())
+cart.remove('orange');
+console.table(cart.getItems())
+
+
+
+
+// ..... getItems() {} повертає ссилку на обькт
+// ......add(product) {} додає обьект продукта в items
+// ......remove(productName) {} повністю видалити продукт з обькту
+//       перебираемо обьект через і томущо будемо видаляти продукт через splice ,а йому потрібен індекс
+// ......CLEAR ОЧИЩАЄ КОРЗИНУ просто примвоюємо пустий масив до items і він очищається
+// ......countTotalPrice РАХУЄ ЗАГАЛЬНУ СУМУ В ОБЬЕКТІ
