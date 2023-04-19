@@ -834,55 +834,55 @@
 
 // ....................КОРЗИНА ТОВАРІВ
 
-const cart = {
-  items: [],
+// const cart = {
+//   items: [],
 
-  getItems() {
-    return this.items;
-   },
-  add(product) {
-    // щоб додати новий ключ з властивістю в обьект створюємо змінну і в неї
-    //  додаємо всі продукти по дефолту ...product і пишемо новий quantity: 1
-    const newProduct = {
-      ...product,
-      quantity: 1,
-    }
-    this.items.push(newProduct);
-   },
-  remove(productName) {
-    for (let i = 0; i < this.items.length; i++) {
-      const item = this.items[i];
-      if (productName === item.name) {
-        this.items.splice(i, 1);
-      }
-  }
-   },
-  clear() { 
-    this.items = [];
-  },
-  countTotalPrice() { 
-    const { items } = this;
-    let total = 0;
+//   getItems() {
+//     return this.items;
+//    },
+//   add(product) {
+//     // щоб додати новий ключ з властивістю в обьект створюємо змінну і в неї
+//     //  додаємо всі продукти по дефолту ...product і пишемо новий quantity: 1
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     }
+//     this.items.push(newProduct);
+//    },
+//   remove(productName) {
+//     for (let i = 0; i < this.items.length; i++) {
+//       const item = this.items[i];
+//       if (productName === item.name) {
+//         this.items.splice(i, 1);
+//       }
+//   }
+//    },
+//   clear() { 
+//     this.items = [];
+//   },
+//   countTotalPrice() { 
+//     const { items } = this;
+//     let total = 0;
 
-    for (const { price } of items) {
-      total += price;
-    }
-    return total
-  },
-  increaseQuantity(productName) { },
-  decreaseQuantity(productName) { },
-};
+//     for (const { price } of items) {
+//       total += price;
+//     }
+//     return total
+//   },
+//   increaseQuantity(productName) { },
+//   decreaseQuantity(productName) { },
+// };
 
 
-cart.add({ name: 'orange', price: 50 });
-cart.add({ name: 'kiwi', price: 40 });
-cart.add({ name: 'kiwi', price: 40 });
-cart.add({ name: 'kiwi', price: 40 });
+// cart.add({ name: 'orange', price: 50 });
+// cart.add({ name: 'kiwi', price: 40 });
+// cart.add({ name: 'kiwi', price: 40 });
+// cart.add({ name: 'kiwi', price: 40 });
 
-console.table(cart.getItems())
-console.log('total', cart.countTotalPrice())
-cart.remove('orange');
-console.table(cart.getItems())
+// console.table(cart.getItems())
+// console.log('total', cart.countTotalPrice())
+// cart.remove('orange');
+// console.table(cart.getItems())
 
 
 
@@ -893,3 +893,155 @@ console.table(cart.getItems())
 //       перебираемо обьект через і томущо будемо видаляти продукт через splice ,а йому потрібен індекс
 // ......CLEAR ОЧИЩАЄ КОРЗИНУ просто примвоюємо пустий масив до items і він очищається
 // ......countTotalPrice РАХУЄ ЗАГАЛЬНУ СУМУ В ОБЬЕКТІ
+
+
+// ....................CALL-BACK ФУНКЦІЇ
+// call бек функція
+
+// const filter = function (array,callback1) {
+
+//   const filterArray = [];
+
+//   for (const element of array) {
+//     console.log(element);
+//     console.log(callback1(element));
+
+//     const passed = callback1(element);
+//     if (passed) {
+//   filterArray.push(element)
+// }
+
+//   }
+//   return filterArray;
+// }
+
+
+// написати кол бек функцію яка буде повертати масив чисел по фільтру.
+// функція повертає числа які бідьші та дорівнюють 3
+
+// const callback1 = function (value) {
+//   return value >= 3;
+// }
+
+
+// const r1 = filter([1, 2, 3, 4, 5], callback1);
+// console.log(r1)
+
+
+// функція  2 повертає числабульше і дорівнює 4
+//  інлайн функція
+
+// const r2 =  filter([1, 2, 3, 4, 5,6,7,8], function (value){
+// return value >= 4;
+// });
+// console.log(r2)
+
+
+// .....ЗАЧАЧА НАСТУПНА
+
+// call бек функція
+
+// const filter = function (array,callback1) {
+
+//   const filterArray = [];
+
+//   for (const element of array) {
+//     console.log(element);
+//     console.log(callback1(element));
+
+//     const passed = callback1(element);
+//     if (passed) {
+//   filterArray.push(element)
+// }
+
+//   }
+//   return filterArray;
+// }
+
+
+// const fruits = [
+//   {name: 'kiwi', quantity: 200, isFresh:true},
+//   {name: 'orange', quantity: 100, isFresh:false},
+//   {name: 'apple', quantity: 700, isFresh:true},
+//   {name: 'bananas', quantity: 250, isFresh:false},
+// ];
+
+// .........повернути масив фруктів у яких кідькість більша 150
+
+// функція вищого рангу в якій використана колбек функця
+
+// const getFruitsWithQuantity = function (fruit) {
+//   return fruit.quantity >= 150;
+// }
+
+
+// const r3 = filter(fruits, getFruitsWithQuantity);
+// console.log(r3)
+
+// ...........................ЗАМКНЕННЯ
+// ФУНКЦІЯ  КОЛБЕК innerFunction ПРИ ВИЗОВІ БУДЕ МАТИ ДОСТУП ДО ЛОКАЛЬНИХ ЗМІННИХ ТІЄЇ ФУНКЦІЇ
+//  ДЕ ЇЇ ВИЗИВАЛИ( БВТЬКІВСЬКА. ФУНКЦІЯ В ЯКІЙ ВОНА ЗНАХОДИТЬСЯ)
+
+// const fnD = function(parametr){
+//   const innerVariable = 'значення веутрішньоі функції fnD';
+
+//   const innerFunction = function () {
+//     console.log(parametr);
+//     console.log(innerVariable);
+//     console.log('визов innerFunction');
+//   }
+//   return innerFunction;
+// }
+// const fnB = fnD(555);
+// fnB();
+// console.log(fnB);
+
+// ЗАДАЧА ОКРУГЛЯТОР
+
+// const floattingPoint = 3.658412;
+// округляємо число до цілого
+// const someInt = Math.round(floattingPoint);
+// console.log(someInt)
+// округляємо до потрібної кількості цифр після крапки і призводимо до числа
+// const withDecimals = Number(floattingPoint.toFixed(2));
+// console.log(withDecimals)
+
+// НАПИШЕМО ФУНКЦІЮ ЯКА БУДЕ ОКРУГЛЯТИ ДО 2 КОЖНЕ ЧИСЛО ДЕ ЇЇ БУДУТЬ ВИКОРИСТОВУВАТИ
+
+// const rounder = function(number, places) {
+//   return Number(number.toFixed(places));
+// }
+// number - саме число яке округляють
+// places - кількість чисел для округлення
+//  визиваємо rounder і функція відпрацювує
+// console.log(rounder(6.5666, 2));
+
+
+//  функція замкнення для округлення 
+// const rounder = function(places){
+//   return function (number){
+//     return  Number(number.toFixed(places));
+//   }
+// }
+// const rounder2 = rounder(2);
+// const rounder3 = rounder(3);
+
+// console.log(rounder2(6.5666, 2));
+// console.log(rounder3(10.5666, 2));
+
+//.........................  СТРІЛОЧНІ ФУНКЦІЇ
+
+// const add = function (a,b,c){
+//   return a+b+c;
+// }
+
+// const add = (a,b,c) => {
+//   return a+b+c;
+// }
+
+// const add = (a,b,c) => a+b+c;
+
+// const add = (a,b,c) => ({array: 12})
+
+// console.log(add(2,10,2));
+
