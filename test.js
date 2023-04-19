@@ -1045,3 +1045,115 @@
 
 // console.log(add(2,10,2));
 
+
+const numbers = [ 1,2,3,8,42];
+//  звичайна функція 
+
+const greaterThenTwo = numbers.filter(function(num) {
+  return num > 2;
+})
+
+console.log(greaterThenTwo)
+//  стрілка 
+
+const greaterThenOne= numbers.map(num => {
+  return num * 3;
+});
+console.log(greaterThenOne)
+//  aбо ще коротше коли один ретерн
+
+const greaterThenOneTwo = numbers.map(num => num * 3);
+console.log(greaterThenOneTwo)
+
+//  a - b відменшого до більшого, b - a навпаки від більшого до меншого
+const sorted = numbers.sort((a,b) => b - a);
+console.log(sorted)
+
+//  звичайна запис функції
+// const res = numbers.filter(function(num){
+//   return num > 2;
+// })
+// .map(function(num) {
+//   return num * 3;
+// })
+// .sort(function(a,b) {
+//   return b - a;
+// })
+// console.log(res)
+
+//  стрілка переписна функція
+
+// const res = numbers
+// .filter(num => num > 2)
+// .map(num => num * 3)
+// .sort((a,b) => b-a);
+
+// console.log(res)
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+
+// ] ;
+// звичайна функція
+// const onlineAndSorted = players.filter(function(player) {
+//   return player.isOnline; 
+// })
+// .sort(function(prevPlayer, nextPlayer) {
+//   return prevPlayer.rank - nextPlayer.rank;
+// })
+// console.log(onlineAndSorted) 
+
+// стрілка
+
+// const onlineAndSorted2 = players
+// .filter( player => player.isOnline)
+// .sort((prevPlayer, nextPlayer) => prevPlayer.rank - nextPlayer.rank)
+// console.log(onlineAndSorted2)
+
+// звичайна функція треба збільшити кількість point кожного player на 10%
+
+// const updatePlayers = players.map(function(player) {
+//   return{
+// ...player,
+// points: player.points + player.points * 0.1,
+//   };
+// });
+// console.table(updatePlayers)
+
+// // стрілка
+
+// const updatePlayers2 = players.map(player =>
+//    ({...player, points: player.points + player.points * 0.1}));
+
+//   console.table(updatePlayers2)
+
+// ЗБІЛЬШИТИ КІЛЬКІСТЬ ГОДИН ПО ID
+
+// const playerIdToUpdate = 'id-3';
+
+// const updatePlayers = players.map(function(player){
+//   if( player.id === playerIdToUpdate){
+//     return {
+//       ...player,
+//       timePlayed: player.timePlayed + 50,
+//     };
+//   }
+//   return player;
+// })
+
+// console.table(updatePlayers)
+
+// стрілка
+
+// const updatePlayers2 = players.map( player => {
+//   return player.id === playerIdToUpdate 
+//   ?{...player, timePlayed: player.timePlayed + 50}
+//   : player;
+// })
+
+// console.table(updatePlayers2)
+  
