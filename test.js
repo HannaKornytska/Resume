@@ -1046,28 +1046,28 @@
 // console.log(add(2,10,2));
 
 
-const numbers = [ 1,2,3,8,42];
+// const numbers = [ 1,2,3,8,42];
 //  звичайна функція 
 
-const greaterThenTwo = numbers.filter(function(num) {
-  return num > 2;
-})
+// const greaterThenTwo = numbers.filter(function(num) {
+//   return num > 2;
+// })
 
-console.log(greaterThenTwo)
+// console.log(greaterThenTwo)
 //  стрілка 
 
-const greaterThenOne= numbers.map(num => {
-  return num * 3;
-});
-console.log(greaterThenOne)
+// const greaterThenOne= numbers.map(num => {
+//   return num * 3;
+// });
+// console.log(greaterThenOne)
 //  aбо ще коротше коли один ретерн
 
-const greaterThenOneTwo = numbers.map(num => num * 3);
-console.log(greaterThenOneTwo)
+// const greaterThenOneTwo = numbers.map(num => num * 3);
+// console.log(greaterThenOneTwo)
 
 //  a - b відменшого до більшого, b - a навпаки від більшого до меншого
-const sorted = numbers.sort((a,b) => b - a);
-console.log(sorted)
+// const sorted = numbers.sort((a,b) => b - a);
+// console.log(sorted)
 
 //  звичайна запис функції
 // const res = numbers.filter(function(num){
@@ -1138,6 +1138,7 @@ console.log(sorted)
 // const updatePlayers = players.map(function(player){
 //   if( player.id === playerIdToUpdate){
 //     return {
+  
 //       ...player,
 //       timePlayed: player.timePlayed + 50,
 //     };
@@ -1157,3 +1158,71 @@ console.log(sorted)
 
 // console.table(updatePlayers2)
   
+// ........................FOREACH МЕТОД ПЕРЕБИРАННЯ МАСИВУ( нічого не повертає)
+
+
+// const numbers = [1, 5, 9, 42, 10, 6];
+
+
+// number елемент масива. index індекс елемент масива. array ссилка на масив
+// numbers.forEach(function (number, index, array) {
+//   console.log(number)
+
+//   // array[index] = 20;
+// });
+// console.log(numbers)
+
+// .......................MAP...............
+
+// const doubleNumbers = numbers.map(number => number * 2);
+// console.log(doubleNumbers)
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+// console.log(players)
+//  масив з імен
+// const playersName = players.map(player => player.name);
+// console.log(playersName)
+// // масив id
+// const playerId = players.map(player => player.id);
+//  console.log(playerId)
+
+//  ЗБІЛЬШИТИ КІЛЬКУІСТЬ ПОІНТІВ НА 10% ( 1.1)
+
+// const updatePoints = players.map(player => {
+//   return {
+//     ...player,
+//     points: Math.round(player.points * 1.1),
+//   }
+// }
+// );
+
+// console.table(updatePoints)
+
+//  ЗБІЛЬШИТИ КФЛЬКІСТЬ TIMEPLAYER У ОДНОГО З ГРАВЦІВ 'id-3'
+
+// const playerIdToUpdate = 'id-3';
+
+// const updateTimePlayer = players.map(player => {
+//   return player.id === playerIdToUpdate
+//     ? { ...player, timePlayed: player.timePlayed + 33 }
+//     : player;
+  
+// })
+// console.table(updateTimePlayer)
+
+// .....................FILTER
+
+const players = [
+  {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+  {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+  {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+  {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+  {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+]
+console.log(players)
