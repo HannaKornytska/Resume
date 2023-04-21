@@ -1165,6 +1165,7 @@
 
 
 // number елемент масива. index індекс елемент масива. array ссилка на масив
+
 // numbers.forEach(function (number, index, array) {
 //   console.log(number)
 
@@ -1218,11 +1219,337 @@
 
 // .....................FILTER
 
-const players = [
-  {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
-  {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
-  {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
-  {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
-  {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
-]
-console.log(players)
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+// console.log(players)
+
+// OТРИМАТИ МАСИВ ВСІХ ГРАВЦІВ ОНЛАЙН деструктуризація
+
+// const onlinePlayers = players.filter(({isOnline}) => isOnline)
+// console.log(onlinePlayers)
+
+// СПИСОК ГРАВЦІВ З ЧАСОМ БІЛЬШЕ 250
+
+// const hardcorePlayers = players.filter(player => player.timePlayed > 250)
+// console.table(hardcorePlayers)
+// const users =
+// [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
+
+
+// const getSortedFriends = users => {
+//  return [...users].filter(
+//    (friend, index, array) => array.indexOf(friend) === index)
+// .sort((a,b) => a.localeCompare - b)
+// };
+// const result = getSortedFriends(users)
+// console.log(result)
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+// console.table(players)
+
+//  .........................FIND  ЗНАХОДТЬ ОДИН(перший) УНІУВЛЬНИЙ ЕЛЕМЕНТ
+//  знайти унікальий елемент
+// const playerIdToFind = 'id-5';
+
+// const playerWithId = players.find(player => player.id === playerIdToFind)
+// console.log(playerWithId)
+// знайти гравця по імені
+
+// const playerNameToFind = 'Orange';
+
+// const playerNameUpdate = players.find(player => player.name === playerNameToFind)
+// console.log(playerNameUpdate)
+
+// ...................EVERY  AND  SOME
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+// console.table(players)
+
+// const isAllOnline = players.every(player => player.isOnline);
+// console.log(isAllOnline)
+
+// const isAnyOnline = players.some(player => player.isOnline);
+// console.log(isAnyOnline)
+
+// .......................REDUCE..................
+
+
+// const numbers = [50, 70, 40, 10];
+// //  acc  тимчасова змінна в якій зберігається значення(результат) на кожній штераціі
+// // number елемент масиву
+// // 0 початкове значення з якого будуть відраховуватися умови функції 
+
+// const total = numbers.reduce((acc, number) => {
+//   // console.log(number)
+//   // console.log(acc)
+//   return acc + number;
+// }, 0);
+// console.log(total)
+
+// ПОРАХУВАТИ ЗАГАЛЬНУ ЗАРПЛАТУ
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
+// //  спочатку витягаємо масив з зарплатами через Object.value, і на ньому вже визиваємо reduce
+// const totalSalary =Object.values(salary)
+//  .reduce((acc, value) => {
+//    return acc + value;
+//  })
+// console.log(totalSalary)  
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+
+// // ПОРАХУВАТИ ЗАГАЛЬНУ КІЛЬКУСТЬ ГОДИН
+
+// const totalTimePlayed = players.reduce((totalTime, player) => {
+//   return totalTime + player.timePlayed
+// }, 0)
+// console.log(totalTimePlayed)
+
+
+// const cart = [
+//   {label: 'Apple', price: 300, quantity: 2},
+//   {label: 'Kiwi', price: 100, quantity: 7},
+//   {label: 'Ananas', price: 250, quantity: 5},
+//   {label: 'Melon', price: 200, quantity: 3},
+// ]
+
+// ПОРАХУВАТИ СУММУ ТОВАРІВ КОРЗИНИ (сумма товара * кількість)
+
+// const totalPriceCart = cart.reduce((totalPrice, item) =>
+//   totalPrice + item.price * item.quantity
+// , 0);
+// console.log(totalPriceCart)
+
+//  деструктуризую
+
+// const totalPriceCart = cart.reduce((totalPrice, { price, quantity }) =>
+//   totalPrice + price * quantity, 0);
+// console.log(totalPriceCart)
+
+// const tweets = [
+//   {id: '000', likes: 3,  tags: ['js', 'node.js']},
+//   {id: '001', likes: 8,  tags: ['html', 'css']},
+//   {id: '002', likes: 10, tags: ['html', 'js', 'node.js']},
+//   {id: '003', likes: 9,  tags: ['css', 'react']},
+//   {id: '004', likes: 2,  tags: ['js', 'node.js', 'react']},
+// ]
+
+// ЗІБРАТИ ВСІ ТЕГИ tags
+
+// const allTags = tweets.reduce((tags,tweet) => {
+//   tags.push(...tweet.tags)
+// return tags;
+// }, []
+// )
+// console.log(allTags)
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
+
+// const getSortedFriends = users =>
+//     users.flatMap(user => user.friends)
+//   .filter((friend,index,users) => users.indexOf(friend) === index)
+// .sort((a,b) => a.localeCompare(b))
+
+// console.log(getSortedFriends(users))
+
+// ВАРІАНТ РІШЕННЯ ЧЕРЕЗ REDUCE AND CONCAT АЛЕ ЕЛЕМЕНТИ НЕ БУДУТЬ УНІКАЛЬНІ
+
+// const getSortedFriends = users => {
+//  return users.reduce((allFriendrs, user) => {
+//   return  allFriendrs.concat(user.friends)
+//   }, [])
+//     .sort((a, b) => a.localeCompare(b));
+// }
+// console.log(getSortedFriends(users))
+
+
+
+    
+// const tweets = [
+//   {id: '000', likes: 3,  tags: ['js', 'node.js']},
+//   {id: '001', likes: 8,  tags: ['html', 'css']},
+//   {id: '002', likes: 10, tags: ['html', 'js', 'node.js']},
+//   {id: '003', likes: 9,  tags: ['css', 'react']},
+//   {id: '004', likes: 2,  tags: ['js', 'node.js', 'react']},
+// ]
+
+// СТАТИСТИКА ТЕГІВ
+
+// const allTags = tweets.reduce((tags,tweet) => {
+//   tags.push(...tweet.tags)
+// return tags;
+// }, []
+// )
+// console.log(allTags)
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   console.log(acc)
+//   if (acc[tag]) {
+
+//     return {
+//       ...acc,
+//       [tag]: acc[tag] + 1,
+//     };
+//   }
+//   return {
+//     ...acc,
+//     [tag]: 1,
+//   };
+// },   {})
+
+// console.log(tagsStats)
