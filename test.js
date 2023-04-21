@@ -1553,3 +1553,84 @@
 // },   {})
 
 // console.log(tagsStats)
+
+
+// ...................................SORT
+// const numbers = [1, 2, 7, 3, 10];
+// numbers.sort();
+// console.log(numbers);
+
+// const text = ['N', 'i', 'T', 'd'];
+// text.sort()
+// console.log(text)
+
+
+// const numbers = [1, 2, 7, 3, 10];
+// //  сорттування на збільшення
+// numbers.sort((firstNumber, secondNumber) => firstNumber - secondNumber);
+// console.log(numbers)
+// // сортоування на зменшення
+// numbers.sort((firstNumber, secondNumber) => secondNumber - firstNumber);
+// console.log(numbers)
+
+// якщо оригінал масиву не портібно змінювати,робимо копіяю масиву методом ...spred
+
+// const copy = [...numbers]
+//   .sort((firstNumber, secondNumber) => secondNumber - firstNumber);
+// console.log(copy)
+
+// ...СОРТУВАННЯ СКЛАДНИХ ТИПІВ
+
+// const players = [
+//   {id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800},
+//   {id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450},
+//   {id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100},
+//   {id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true,  points: 65,rank: 650},
+//   {id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false,  points: 75,rank: 200},
+// ]
+// сортуємо  по timePlayed
+
+// const sorteByBestPlayers = [...players].sort((a, b) =>
+//   a.timePlayed - b.timePlayed);
+// console.log(sorteByBestPlayers)
+  
+// по алфавіту LOCALECOMPARE
+// const byName = [...players].sort((a, b) =>
+//   a.name.localeCompare(b.name));
+//   console.log(byName)
+
+//  ..........................fLATMAP
+
+// const tweets = [
+//   {id: '000', likes: 3,  tags: ['js', 'node.js']},
+//   {id: '001', likes: 8,  tags: ['html', 'css']},
+//   {id: '002', likes: 10, tags: ['html', 'js', 'node.js']},
+//   {id: '003', likes: 9,  tags: ['css', 'react']},
+//   {id: '004', likes: 2,  tags: ['js', 'node.js', 'react']},
+// ]
+
+// const listTags = tweets.map(tweet => tweet.tags);
+// console.log(listTags)
+// // деструктуризація
+// const listAllTags = tweets.flatMap(({tags}) => tags);
+// console.log(listAllTags)
+
+// ....................ЛАНЦЮГИ АЛГОРИТМІВ
+
+// const players = [
+//   { id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800 },
+//   { id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450 },
+//   { id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100 },
+//   { id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true, points: 65, rank: 650 },
+//   { id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false, points: 75, rank: 200 },
+// ];
+
+//  ЗАДАЧА ВІДСОРТУВАРИТИ ПО РАНГУ ГРАВЦІВ ЯКІ ОНЛАЙН
+// 1. ФІЛЬТРУЄМО ГРАВЦІВ ХТО ОНЛАЙН
+// 2. СОРТУЄМО ПО РАГНУ
+
+// const onlineAndSorted = players
+//   .filter(player => player.isOnline)
+//   .sort((a, b) => a.rank - b.rank);
+
+// console.table(onlineAndSorted);
