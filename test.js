@@ -1617,13 +1617,13 @@
 
 // ....................ЛАНЦЮГИ АЛГОРИТМІВ
 
-const players = [
-  { id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800 },
-  { id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450 },
-  { id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100 },
-  { id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true, points: 65, rank: 650 },
-  { id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false, points: 75, rank: 200 },
-];
+// const players = [
+//   { id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800 },
+//   { id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450 },
+//   { id: 'id-3', name: 'Orange', timePlayed: 20, isOnline: false, points: 40, rank: 100 },
+//   { id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true, points: 65, rank: 650 },
+//   { id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false, points: 75, rank: 200 },
+// ];
 
 //  ЗАДАЧА ВІДСОРТУВАРИТИ ПО РАНГУ ГРАВЦІВ ЯКІ ОНЛАЙН
 // 1. ФІЛЬТРУЄМО ГРАВЦІВ ХТО ОНЛАЙН
@@ -1638,5 +1638,71 @@ const players = [
 
 //......................FINDINDEX
 
-const findIndexPlayers = players.findIndex(player => player.rank);
-console.log(findIndexPlayers)
+// // згайти індекс  першого елемента який відповідає умові( === 100)
+// const findIndexPlayers = players.findIndex(player => player.rank === 100);
+// console.log(findIndexPlayers)
+// // 2
+
+// // знайти шндекс першого елемента що відповідає умову ( > 500)
+// const findIndex = players.findIndex(player => player.timePlayed > 500)
+// console.log(findIndex)
+// // 3
+
+
+//  ..............CALL BACK
+// ЗАВДАННЯ 
+// createProduct(obj, callback)(обєкт товару.колбек).ФУНКЦІЯ СТВОРЮЄ СТВОРЮЄ ОБІЄКТ ТОВАРІ 
+// ДОДАЄ ВЛАСТИВІСТЬ ID.ТА ВИКЛИКАЄ КОЛЛБЕК ПЕРЕДАЮЧИ ЙОМУ СТВОРЕНИЙ ОБЬІКТ
+// ...logProduct(product) ЛОГУЄ НОВИЙ ОБЬЕКТ З ID В КОНСОЛЬ
+// ...logTotalPrice(product) РАХУЄ ЗАГАЛЬНУ ВАРТІСТЬ ТОВАРУ
+
+// Math.random().toString(36).substring(2)  РАНДОМНА СТРОКА ОБРІЗАНА ПІСЛЯ 2 СИМВОЛУ
+  
+
+// function logProduct(product) {
+//   console.log(product);
+// }
+// function logTotalPrice(product) {
+//   console.log(product.price * product.quantity);
+// }
+
+
+// function createProduct(obj, callback) {
+//   // console.log(obj)
+//   // console.log(callback)
+//   let product = {
+//     ...obj,
+//     id: Math.random().toString(36).substring(2),
+//   };
+//   callback(product);
+//   return product;
+// }
+
+
+// createProduct({ name: 'apple', price: 30, quantity: 3 }, logProduct);
+// createProduct({ name: 'kiwi', price: 20, quantity: 5 }, logTotalPrice);
+
+
+// ЗАДАЧА ДОДАТИ ДО ACCOUNT(ONSUCCESS,ONERORR)  МЕТОДИ WITHDRAW І DEPOSIT, ДЕ AMOUNT ЦЕ СУММА ЩПЕРАЦІЇ, ДРУГИЙ
+// І ТРЕТІЙ  - КОЛЛБЕКИ
+// WITHDRAW ВИКЛИКАЄ  ONERORR ЯКЩО AMOUNT  > TRANSATION_LIMIT АБО BALANCE
+// DEPOSIT ВИКЛИКАЄ ONERORR ЯКЩО AMOUNT > TRANSATION_LIMIT АБО 0
+
+const TRANSATION_LIMIT = 1000;
+
+const account = {
+  username: 'Jacob',
+  balance: 400,
+
+  withdraw(amount, onSuccess, onErorr) {
+    this.balance -= amount;
+  },
+  deposit(amount, onSuccess, onErorr) {
+    if()
+    this.balance += amount;
+
+
+  }
+}
+
+account.withdraw(2000, handleSuccess, handleErorr)
