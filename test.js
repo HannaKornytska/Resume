@@ -1683,26 +1683,3 @@
 // createProduct({ name: 'kiwi', price: 20, quantity: 5 }, logTotalPrice);
 
 
-// ЗАДАЧА ДОДАТИ ДО ACCOUNT(ONSUCCESS,ONERORR)  МЕТОДИ WITHDRAW І DEPOSIT, ДЕ AMOUNT ЦЕ СУММА ЩПЕРАЦІЇ, ДРУГИЙ
-// І ТРЕТІЙ  - КОЛЛБЕКИ
-// WITHDRAW ВИКЛИКАЄ  ONERORR ЯКЩО AMOUNT  > TRANSATION_LIMIT АБО BALANCE
-// DEPOSIT ВИКЛИКАЄ ONERORR ЯКЩО AMOUNT > TRANSATION_LIMIT АБО 0
-
-const TRANSATION_LIMIT = 1000;
-
-const account = {
-  username: 'Jacob',
-  balance: 400,
-
-  withdraw(amount, onSuccess, onErorr) {
-    this.balance -= amount;
-  },
-  deposit(amount, onSuccess, onErorr) {
-    if()
-    this.balance += amount;
-
-
-  }
-}
-
-account.withdraw(2000, handleSuccess, handleErorr)
