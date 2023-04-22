@@ -1617,13 +1617,13 @@
 
 // ....................ЛАНЦЮГИ АЛГОРИТМІВ
 
-// const players = [
-//   { id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800 },
-//   { id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450 },
-//   { id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100 },
-//   { id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true, points: 65, rank: 650 },
-//   { id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false, points: 75, rank: 200 },
-// ];
+const players = [
+  { id: 'id-1', name: 'Mango', timePlayed: 310, isOnline: true, points: 54, rank: 800 },
+  { id: 'id-2', name: 'Kiwi', timePlayed: 360, isOnline: true, points: 90, rank: 450 },
+  { id: 'id-3', name: 'Orange', timePlayed: 720, isOnline: false, points: 40, rank: 100 },
+  { id: 'id-4', name: 'Apple', timePlayed: 560, isOnline: true, points: 65, rank: 650 },
+  { id: 'id-5', name: 'Ananas', timePlayed: 120, isOnline: false, points: 75, rank: 200 },
+];
 
 //  ЗАДАЧА ВІДСОРТУВАРИТИ ПО РАНГУ ГРАВЦІВ ЯКІ ОНЛАЙН
 // 1. ФІЛЬТРУЄМО ГРАВЦІВ ХТО ОНЛАЙН
@@ -1634,3 +1634,9 @@
 //   .sort((a, b) => a.rank - b.rank);
 
 // console.table(onlineAndSorted);
+
+
+//......................FINDINDEX
+
+const findIndexPlayers = players.findIndex(player => player.rank);
+console.log(findIndexPlayers)
