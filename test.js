@@ -1683,3 +1683,177 @@
 // createProduct({ name: 'kiwi', price: 20, quantity: 5 }, logTotalPrice);
 
 
+// ...................................THIS
+
+// const fn = function () {
+//   console.log('fn -> this', this)
+// }
+// fn()
+
+// underfind
+// const book = {
+//   title: 'React for beginners',
+
+//   showThis() {
+//     console.log('showThis -> this', this);
+//   },
+
+//   showTitle() {
+//     console.log('showTitle -> this.title', this.title);
+//   },
+// };
+
+// book.showThis()
+// const xThis = book.showThis;
+// xThis()
+// underfind
+// const xTitle = book.showTitle;
+// xTitle()
+
+
+/////////......................ПОЧАТОК АВТОПЕРЕВІРКИ. МОДУЛЬ 1................//////////
+/// TASK 1
+// let productName = 'Droid';
+// let pricePerItem = 2000;
+// console.log(productName)
+// console.log(pricePerItem)
+
+// / TASK 2
+// productName = 'Repair droid';
+// pricePerItem = 3500;
+// console.log(productName)
+// console.log(pricePerItem)
+
+// / TASK 3
+// const topSpread = 160;
+// let distance = 617.54;
+// const login = 'mango935';
+// let isOnline = true;
+// const isAdmin = false;
+// console.log(topSpread)
+// console.log(distance)
+// console.log(login)
+// console.log(isOnline)
+// console.log(isAdmin)
+
+// / TASK 4
+// const pricePerItem = 3500;
+// const orderedQuantity = 4;
+// let totalPrice = pricePerItem * orderedQuantity;
+// console.log(totalPrice)
+
+// / TASK 5
+// const productName = 'Droid';
+// const pricePerItem = 3500;
+// const message = `You picked ${productName}, price per item is ${pricePerItem} credits`
+// console.log(message)
+
+// / TASK 6
+// const pricePerDroid = 800;
+// const orderedQuantity = 6;
+// const deliveryFree = 50;
+
+// let totalPrice = pricePerDroid * orderedQuantity + deliveryFree;
+// console.log(totalPrice)
+// const message = `You ordered droids worth ${totalPrice} credits.Delivery (${deliveryFree} credits) is included in total price `;
+// console.log(message)
+
+// /TASK 7
+// function sayHi() {
+//   console.log(`Hello,this is my first function!`);
+// }
+// sayHi();
+
+// / TASK 8
+// function add(a, b, c) {
+//   console.log(`Addition result equals ${a + b + c} `);
+// }
+// add(15, 27, 10);
+
+// / TASK 9
+// function add(a, b, c) {
+//   return a + b + c;
+// };
+// console.log(add(10,20,30))
+
+// / TASK 10
+// function makeMessage(name, price) {
+//   const message = `You picked ${name}, price per item is ${price} credits `;
+//   return message;
+// }
+// console.log(makeMessage(`Radar`, 6150))
+
+// / TASK 11
+// function calculateTotalPrice(orderedQuantity, pricePerItem) {
+//   return orderedQuantity * pricePerItem;
+// }
+// console.log(calculateTotalPrice(5, 100));
+
+// / TASK 12
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFree) {
+//   const totalPrice = orderedQuantity * pricePerDroid + deliveryFree;
+//   const message = `You ordered  droids worth ${totalPrice} credts.Delivery$(${deliveryFree} credits) is included in total price.`;
+//   return message;
+// }
+// console.log(makeOrderMessage(2,100,50))
+
+// / TASK 13
+// function isAdult(age) {
+//   const passed = age >= 18;
+//   return passed;
+// }
+// console.log(isAdult(20));
+// console.log(isAdult(15));
+
+// / TASK 14
+// function isValidPassword(password) {
+//   const SAVED_PASSWORD = `jqueryismyjam`;
+
+//   const isMatch = SAVED_PASSWORD === password;
+//   return isMatch
+// }
+// console.log(isValidPassword(`mangodab265`));
+// console.log(isValidPassword(`jqueryismyjam`));
+
+// / TASK 15
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     message = 'You are an adult';
+//   } else {
+//    message = 'You are a minor';
+//   }
+//   return message;
+// }
+// console.log(checkAge(20))
+// console.log(checkAge(8))
+
+// / TASK 16
+// function checkStorage(available, ordered) {
+//   let message;
+//   if (ordered > available) {
+//   message ='Not enough gooods in stock'
+//   } else {
+//     message ='Ordered is processed,our manager will contact you'
+// }
+//   return message;
+// }
+// console.log(checkStorage(100,50))
+// console.log(checkStorage(100,130))
+
+// / TASK 17
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+//  a += 2;
+// console.log(a)
+// b -= 4;
+// console.log(b)
+// c *= 3;
+// console.log(c)
+// d /= 10;
+// console.log(d)
+
