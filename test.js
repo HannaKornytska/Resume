@@ -1857,3 +1857,113 @@
 // d /= 10;
 // console.log(d)
 
+// / TASK 18
+
+// function makeTransction(pricePerDroid, orderedQuantity, customerCredits) {
+//   let totalPrice = pricePerDroid * orderedQuantity;
+//   let message;
+//   if (totalPrice > customerCredits) {
+//     message = `Insufficient funds !`;
+//   } else {
+//     message = `You ordered ${orderedQuantity} droids, you have ${customerCredits - totalPrice} credits left`;
+//   }
+//   return message;
+// }
+// console.log(makeTransction(3000, 5, 23000));
+// console.log(makeTransction(5000, 10, 8000));
+
+// / TASK 19
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'wwwwwwwwwwww';
+//   let message;
+//   if (password === null) {
+//     message = 'Canceled by user'
+//   } else if (password === ADMIN_PASSWORD) {
+//     message = 'Welcome!'
+//   } else {
+//     message = 'Access danied,wrong password!'
+//   }
+//   return message;
+// }
+// console.log(checkPassword('mangohackzor'));
+// console.log(checkPassword(null));
+// console.log(checkPassword('wwwwwwwwwwww'));
+
+// / TASK 20
+// function checkStorage(available, ordered) {
+//   let message;
+//   if (ordered === 0) {
+//   message = 'There are no products in the order!'
+//   } else if (ordered > available) {
+//     message = 'You order is too large, there are not enough items in stock! '
+//   } else {
+//     message = 'The order is accepted, our manager will contact you'
+//   };
+//   return message;
+// }
+// console.log(checkStorage(100,50))
+// console.log(checkStorage(100,130))
+// console.log(checkStorage(70,0))
+
+// / TASK 21
+// function isNumberInRange(start, end, number) {
+//   let isInRange = number >= start && number <= end;
+//   return isInRange;
+// }
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+
+// / TASK 22
+// function checkIfCanAccessContent(subType) {
+//   let canAccessContent = subType === 'pro' || subType === 'vip';
+//   return canAccessContent;
+// }
+// console.log(checkIfCanAccessContent('pro'));
+// console.log(checkIfCanAccessContent('starter'));
+
+// / TASK 23
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !isInRange;
+//   return isNotInRange;
+// }
+// console.log(isNumberNotInRange(10, 30, 17));
+// console.log(isNumberNotInRange(10, 30, 5));
+
+// / TASK 24
+// function getDiscount(totalSpend) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLDEN_DISCOUNT = 0.1
+    
+//   let discount = 0;
+//   if (totalSpend >= 50000) {
+//     discount = GOLDEN_DISCOUNT;
+//   } else if (totalSpend >= 20000 && totalSpend < 50000) {
+//     discount = SILVER_DISCOUNT;
+//   } else if (totalSpend >= 5000 && totalSpend < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else  {
+//     discount = BASE_DISCOUNT;
+//   }
+//   return discount;
+// }
+// console.log(getDiscount(137000));
+// console.log(getDiscount(46900));
+// console.log(getDiscount(8250));
+// console.log(getDiscount(1300));
+// console.log(getDiscount(5000));
+// console.log(getDiscount(20000));
+// console.log(getDiscount(50000));
+
+// / TASK 25
+// function checkStorage(available, ordered) {
+//   let message;
+//   message = ordered > available ? 'Not enough goods in stock!' : 'The order is accepted,our manager will contact you';
+//   return message;
+// }
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+
+// / TASK 26
