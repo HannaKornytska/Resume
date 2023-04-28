@@ -1967,3 +1967,142 @@
 // console.log(checkStorage(100, 130));
 
 // / TASK 26
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'wwwwwwwwwwww';
+//   let message = '';
+//   message = password === ADMIN_PASSWORD ? 'Access is allowed' : 'Access denied,wrong password!'
+//   return message;
+// }
+// console.log(checkPassword('wwwwwwwwwwww'));
+// console.log(checkPassword('sjvdlhjklh'));
+
+// / TASK 27
+// function getSubscriptionPrice(type) {
+//   let price;
+//   switch (type) {
+//     case 'starter':
+//       price = 0;
+//       break;
+//     case 'professional':
+//       price = 20;
+//       break;
+//     case 'organization':
+//       price = 50;
+//       break;
+//   }
+//   return price;
+// }
+// console.log(getSubscriptionPrice('professional'));
+// console.log(getSubscriptionPrice('organization'));
+// console.log(getSubscriptionPrice('starter'));
+
+// / TASK 28
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'wwwwwwwwwwwww';
+//   let message;
+//   switch (password) {
+//     case null:
+//       message = 'Canceled by user!';
+//       break;
+//     case ADMIN_PASSWORD:
+//       message = 'Welcome!';
+//       break;
+//     default: 
+//       message = 'Access denied, wrong password!'
+//   }
+//   return message;
+// }
+// console.log(checkPassword('iiiiiiiiiii'));
+// console.log(checkPassword(null));
+// console.log(checkPassword('polyhax'));
+// console.log(checkPassword('wwwwwwwwwwwww'));
+
+// / TASK 29
+// function getShippingCost(country) {
+//   let message;
+//   let price;
+//   switch (country) {
+//     case 'China':
+//       price = 100;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case 'Chile':
+//       price = 250;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case 'Australia':
+//       price = 170;
+//       message = `Shipping to ${country} will cost ${price} credits`; 
+//       break;
+//     case 'Jamaica':
+//       price = 120;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     default:
+//       message = `Sorry,there is no delivery to your country`;
+//   }
+//   return message;
+// };
+// console.log(getShippingCost('Australia'));
+// console.log(getShippingCost('Germany'));
+// console.log(getShippingCost('China'));
+// console.log(getShippingCost('Sweden'));
+
+// / TASK 30
+// function getNameLength(name) {
+//   return  `Name ${name} is ${name.length} characters long`;
+// }
+// console.log(getNameLength('Poly'));
+// console.log(getNameLength('Harambe'));
+// console.log(getNameLength('Billy'));
+// console.log(getNameLength('Joe'));
+
+// / TASK 31
+// const courseTopic = 'JavaScript essentials';
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopicLength - 1];
+// console.log(courseTopic);
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+
+// / TASK 32
+// function getSubstring(string, length) {
+//   const substring = string.slice(string[0], length);
+//   return substring;
+// }
+// console.log(getSubstring('Hello word', 3));
+// console.log(getSubstring('Hello word', 6));
+// console.log(getSubstring('Hello word', 11));
+
+// / TASK 33
+// function formatMessage(message, maxLength) {
+//   let result;
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else {
+//     result = message.slice(0, maxLength) + '...';
+//   }
+//   return result;
+// }
+// console.log(formatMessage('Curabitur lagula sapien', 16));
+// console.log(formatMessage('Curabitur lagula sapien', 23));
+// console.log(formatMessage('Vestibulum facilisis purus nec', 30));
+// console.log(formatMessage('Nunc sed turpic a felis in nunc fringilla', 15));
+
+// / TASK 34
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase();
+//   return normalizedInput;
+// };
+// console.log(normalizeInput('Hello world'));
+// console.log(normalizeInput('This ISNT SpaM'));
+// console.log(normalizeInput('Big SALE'));
+
+// / TASK 35
+function checForName(fullname, name) {
+  
+};
+console.log();
+console.log();
