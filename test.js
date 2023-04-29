@@ -2230,3 +2230,58 @@
 // console.log(slugify('Arrays FOR begginers'));
 
 // / TASK 14
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, -1);
+// const lastThreeEls = fruits.slice(2);
+//   console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+// / TASK 15
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+// const allClients = oldClients.concat(newClients);
+// console.log(allClients);
+
+// / TASK 16
+// function makeArray(firstArray, secondArray, maxLength) {
+//   let newArray = firstArray.concat(secondArray);
+//   newArray = newArray > maxLength ? newArray : newArray.slice(0, maxLength)
+  
+//   return newArray;
+// };
+// console.log(makeArray(['Mango','Poly'],['Ajax', 'Chelsea'], 3));
+// console.log(makeArray(['Mango','Poly','Houston'],['Ajax', 'Chelsea'], 4));
+// console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea', 'Houston'], 0));
+
+// / TASK 17
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i++)
+// console.log(i);
+
+// / TASK 18
+// function calculateTotal(number) {
+//   let total = 0;
+//   for (let i = 1; i <= number; i++){
+//     total += i ;
+//   }
+//   return total;
+// }
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(7));
+// console.log(calculateTotal());
+
+// / TASK 19
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// for (let i = 0; i < fruits.length; i++) {
+//   if (i < 4) {
+//     const fruit = fruits[i];
+//     console.log(fruit);
+//   }
+// }
+
+// / TASK 20
