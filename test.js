@@ -2101,8 +2101,132 @@
 // console.log(normalizeInput('Big SALE'));
 
 // / TASK 35
-function checForName(fullname, name) {
+// function checForName(fullname, name) {
+//   const result = fullname.includes(name);
+//   return result;
+// }; 
+// console.log(checForName('Egor Kolbasov', 'Egor'));
+// console.log(checForName('Egor Kolbasov','egor' ));
+
+// / TASK 36
+// function checkForSpam(message) {
+//   let result;
+//   if (message.toLowerCase().includes('spam') || message.toLowerCase().includes('sale')) {
+//     result = true;
+//   } else {
+//     result = false;
+//   }
+//   return result
+// };
+// console.log(checkForSpam('Latest technology news'));
+// console.log(checkForSpam('Get best sale offers now!'));
+
+// / MODULE 2
+
+// / TASK 1
+// function checkAge(age) {
+
+//   if (age >= 18) {
+//     return  'You are an adult';
+//   }
+//   return 'You are minor';
   
-};
-console.log();
-console.log();
+// }
+// console.log(checkAge(20));
+// console.log(checkAge(8));
+
+// / TASK 2
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'wwwwwwwwwwwww';
+//   if (password === ADMIN_PASSWORD) {
+//     return 'Welcome!';
+//   }
+//   return 'Access danied, wrong password';
+// }
+// console.log(checkPassword('mango'));
+// console.log(checkPassword('wwwwwwwwwwwww'));
+
+// / TASK 3
+// function checkStorage(available, ordered) {
+//   if (ordered === 0) {
+//     return 'Your order is empty'
+//   } if (ordered > available){
+//     return 'Your order is too large,not enough goods in stock';
+//   }
+//    return ' The order is accepted,our manager contact you';
+   
+// };
+// console.log(checkStorage(100,50));
+// console.log(checkStorage(100,130));
+// console.log(checkStorage(70,0));
+
+// / TASK 4
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// console.log(fruits);
+
+// / TASK 5
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// const firstElement = fruits[0];
+// const secondElement = fruits[1];
+// const lastElement = fruits[fruits.length - 1];
+// console.log(firstElement);
+// console.log(secondElement);
+// console.log(lastElement);
+
+// / TASK 6
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// fruits[1] = 'peach';
+// fruits[3] = 'banana';
+// console.log(fruits);
+
+// / TASK 7
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// const fruitsArrayLength = fruits.length;
+// console.log(fruitsArrayLength);
+
+// / TASK 8
+// const fruits = ['apple', 'peach', 'pear', 'banana'];
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElementIndex);
+// console.log(lastElement);
+
+// / TASK 9
+// function getExtremeElements(array) {
+//   return [array[0], array[array.length - 1]];
+// };
+// console.log(getExtremeElements([1,2,3,4,5]));
+// console.log(getExtremeElements(['Earth','Mars','Venus']));
+
+// / TASK 10
+// function splitMessage(message, delimiter) {
+//   return message.split(delimiter);
+// }
+// console.log(splitMessage('Mango hurries to the train', ' '));
+// console.log(splitMessage('Mango', ''));
+
+// / TASK 11
+// function calculateEngravingPrice(message, pricePerWord) {
+//   let totalPrice;
+//   const messageAll = message.split(' ');
+//   totalPrice = messageAll.length * pricePerWord;
+//   return totalPrice;
+// };
+// console.log(calculateEngravingPrice('JavaScript is in my blood', 10));
+// console.log(calculateEngravingPrice('JavaScript is in my blood', 20));
+
+// / TASK 12
+// function makeStringFromArray(array, delimiter) {
+//   return array.join(delimiter);
+// };
+// console.log(makeStringFromArray(['Mango', 'hurries', 'to', 'the', 'train'], ' '));
+// console.log(makeStringFromArray(['M' ,'a','n','g','o'], ''));
+
+// / TASK 13
+// function slugify(title) {
+//   return title.toLowerCase().split(' ').join('-');
+  
+// };
+// console.log(slugify('Arrays FOR begginers'));
+
+// / TASK 14
