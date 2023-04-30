@@ -2285,3 +2285,110 @@
 // }
 
 // / TASK 20
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i = 0; i < order.length; i ++){
+//     total += order[i];
+//   };
+//   return total;
+// };
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+
+// / TASK 21
+// function findLongestWord(string) {
+//   const words = string.split(' ');
+//   let longWord = words[words.length - 1];
+//   console.log(longWord);
+//   for (const element of words) {
+//     if (element.length > longWord.length) {
+//       longWord = element;
+//     }
+//   }
+//   return longWord;
+// };
+
+// console.log(findLongestWord('the quick brown fox jumped over the lazy dog'));
+// console.log(findLongestWord('google do a roll'));
+
+// / TASK 22
+// function createArrayOfNumbers(min, max) {
+//   const array = [];
+//   for (let i = min; i <= max; i++) {
+//     array.push(i);
+//   }
+//   return array;
+// };
+// console.log(createArrayOfNumbers(1,3));
+// console.log(createArrayOfNumbers(14,17));
+
+// / TASK 23
+// function filterArray(numbers, value) {
+//   let array = [];
+//   for (let i = 0; i <= numbers.length; i++) {
+//     if ( [i] > value) {
+//       array.push(i)
+//     }
+//   }
+//   return array;
+// };
+// console.log(filterArray([1,2,3,4,5], 3));
+
+// / TASK 24
+// function checkFruit(fruit) {
+//   const  fruits = ['apple', 'plum', 'pear', 'orange']
+//   let check = fruits.includes(fruit) ? true : false;
+// return check;
+// };
+// console.log(checkFruit('plum'));
+// console.log(checkFruit('mandarin'));
+
+// / TASK 25
+// function getCommonElements(array1, array2) {
+//   let newArray = [];
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array1.includes(array2[i])) {
+//       newArray.push(array2[i])
+//     }
+
+//     return newArray;
+//   }
+// };
+// console.log(getCommonElements([1,2,3], [2,4]));
+
+// / TASK 26
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for ( const element of order) {
+//     total += element;
+//   }
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// / TASK 27
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+//   return filteredNumbers;
+// }
+// console.log(filterArray([1,2,3,4,5], 3));
+
+// / TASK 28
+// const a = 3 % 3;
+// // console.log(a);
+// const b = 4 % 3;
+// // console.log(b);
+// const c = 11 % 8;
+// // console.log(c);
+// const d = 12 % 7;
+// // console.log(d);
+// const e = 8 % 6;
+// // console.log(e);
+
+// / TASK 29
