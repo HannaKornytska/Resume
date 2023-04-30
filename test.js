@@ -2392,3 +2392,50 @@
 // // console.log(e);
 
 // / TASK 29
+// function getEvenNumbers(start, end) {
+//   const numbers = [];
+//   for (let i = start; i < end; i++){
+//     if (i % 2 === 0) {
+//       numbers.push(i);
+//     }
+//   }
+//   return numbers;
+// };
+// console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(3, 11));
+
+// / TASK 30
+// const start = 6;
+// const end = 27;
+// let numbers;
+// for (let i = start; i < end; i++) {
+//   if (i % 5 === 0) {
+//     numbers = i;
+//     break;
+//   }
+// }
+// console.log(numbers);
+
+// / TASK 31
+// function findNumber(start, end, divisor) {
+//   for (let i = start; i < end; i++){
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+// };
+// console.log(findNumber(2, 6, 5));
+// console.log(findNumber(8, 17, 3));
+// console.log(findNumber(6, 9, 4));
+
+// / TASK 32
+// function includes(array, value) {
+//   for (const element of array) {
+//     if ( element === value )
+//     return true;
+//   }
+//   return false;
+// };
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
