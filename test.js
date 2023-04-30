@@ -2439,3 +2439,13 @@
 // console.log(includes([1, 2, 3, 4, 5], 3));
 // console.log(includes([1, 2, 3, 4, 5], 17));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+console.log(document);
+
+const body = document.body;
+console.log(body);
+// пошук елеиента(класс в html)
+const listWithClass = document.querySelector('.title');
+console.log(listWithClass);
+
+const text = document.querySelector(".text");
+console.log(text.textContent);
